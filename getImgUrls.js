@@ -41,7 +41,7 @@ function getUrls(){
 
 }
 getUrls().then(arr=>{
-    console.log(arr);
+    console.log(Array.from(arr).join('\n'));
 })
 
 
