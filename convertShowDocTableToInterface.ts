@@ -5,7 +5,7 @@
  * 2. 执行下面的代码
  * 3. 需要的话用IDE自己再格式化一下
  */
-const id = '';
+const id = 't1';
 // 请在tbody上添加对应的ID
 let results = [];
 $(`#${id} tr`).map((index,one)=>{
@@ -16,9 +16,11 @@ $(`#${id} tr`).map((index,one)=>{
 });
 function getRealType(type=''){
     switch (type.toLowerCase()) {
+        case 'long': return 'number';
         case 'int':return 'number';
         case 'date': return 'string';
         case 'string': return 'string';
+        case 'object': return 'object';
         default: return 'unknown'; //默认返回unknown 方便修改
     }
 }
@@ -33,9 +35,9 @@ results.map(r=>{
 })
 
 // JSON.stringify(int_face,null,'    ');
-let finalString = '{\n'
+let finalString = ''
 int_face.map(one=>{
     console.log(one);
     finalString+= one+'\n';
 })
-finalString+='\n}'
+finalString+=''
