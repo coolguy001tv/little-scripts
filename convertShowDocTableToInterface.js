@@ -28,9 +28,9 @@ console.log('请确认顺序是 参数名 必选 类型 说明');
 let int_face = [];
 results.map(r=>{
     const name = r[0];
-    const must = r[1] === '是'? '': '?';// 是必选的话直接冒号，否则是?:
-    const type = getRealType(r[2]);
-    const comment = r[3];
+    const must = '';// 是必选的话直接冒号，否则是?:
+    const type = getRealType(r[1]);
+    const comment = r[2];
     int_face.push(`${name}${must}:${type};//${comment}`);
 })
 
