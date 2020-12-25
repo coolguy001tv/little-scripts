@@ -1,5 +1,5 @@
 const fs = require('fs');
-console.log(process.argv);
+// console.log(process.argv);
 
 const [,,fileName] = process.argv;
 

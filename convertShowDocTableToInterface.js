@@ -21,6 +21,9 @@ function getRealType(type=''){
         case 'date': return 'string';
         case 'string': return 'string';
         case 'object': return 'object';
+        case 'boolean':
+        case 'bool':
+            return 'boolean';
         default: return 'unknown'; //默认返回unknown 方便修改
     }
 }
